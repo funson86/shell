@@ -15,7 +15,6 @@ make install
 
 
 # install php
-yum -y install gcc gcc-c++  make cmake automake autoconf kernel-devel ncurses-devel libxml2-devel openssl-devel curl-devel libjpeg-devel libpng-devel  pcre-devel libtool-libs freetype-devel gd zlib-devel file bison patch mlocate flex diffutils   readline-devel glibc-devel glib2-devel bzip2-devel gettext-devel libcap-devel libmcrypt-devel openldap openldap-devellibxslt-devel
 
 cd /root/soft
 wget http://php.net/get/$softPkg/from/this/mirror
@@ -38,11 +37,13 @@ chkconfig php-fpm on
 
 
 ######################
+# vi /usr/local/nginx/conf/nginx.conf
+# user www www;
+#
 # vi /usr/local/php/etc/php-fpm.conf
 # user = www
 # group = www
 # pid = run/php-fpm.pid
-#
 #
 # vi /usr/local/php/etc/php.ini
 # date.timezone = PRC
