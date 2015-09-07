@@ -3,9 +3,9 @@
 soft=php-5.6.13
 softPkg=$soft.tar.gz
 
-cd /root/soft
 
 # install libmcrypt for php
+cd /root/soft
 wget http://nchc.dl.sourceforge.net/project/mcrypt/Libmcrypt/2.5.8/libmcrypt-2.5.8.tar.gz
 tar zxvf libmcrypt-2.5.8.tar.gz
 cd libmcrypt-2.5.8
@@ -17,6 +17,7 @@ make install
 # install php
 yum -y install gcc gcc-c++  make cmake automake autoconf kernel-devel ncurses-devel libxml2-devel openssl-devel curl-devel libjpeg-devel libpng-devel  pcre-devel libtool-libs freetype-devel gd zlib-devel file bison patch mlocate flex diffutils   readline-devel glibc-devel glib2-devel bzip2-devel gettext-devel libcap-devel libmcrypt-devel openldap openldap-devellibxslt-devel
 
+cd /root/soft
 wget http://php.net/get/$softPkg/from/this/mirror
 mv mirror $softPkg
 tar zxvf $softPkg

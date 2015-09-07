@@ -4,9 +4,8 @@ soft=mysql-5.6.26
 softPkg=$soft.tar.gz
 
 
-cd /root/soft
-
 # install cmake for mysql
+cd /root/soft
 wget http://www.cmake.org/files/v2.8/cmake-2.8.8.tar.gz
 tar zxvf cmake-2.8.8.tar.gz
 cd cmake-2.8.8
@@ -23,6 +22,7 @@ mkdir -p /data/mysql
 chown -R mysql:mysql /data/mysql
 mkdir -p /usr/local/mysql
 
+cd /root/soft/
 wget http://mirrors.sohu.com/mysql/MySQL-5.6/$softPkg
 tar zxvf $softPkg
 cd $soft
@@ -42,25 +42,27 @@ ln -s /usr/local/mysql/include/mysql /usr/include/mysql
 ln -s /tmp/mysql.sock /var/lib/mysql/mysql.sock
 
 ######################
-# vi /etc/my.cnf #编辑配置文件,在 [mysqld] 部分增加
-# datadir = /data/mysql #添加MySQL数据库路径
-# 然后到/usr/local/mysql下执行
+# vi /etc/my.cnf in [mysqld] section
+# datadir = /data/mysql 
+# Then go to /usr/local/mysql and execute
 # cd /usr/local/mysql
-# ./scripts/mysql_install_db --user=mysql #生成mysql系统数据库
+# ./scripts/mysql_install_db --user=mysql #Generate mysql system database
 # 
 #
-# vi /etc/rc.d/init.d/mysqld #编辑　
-# basedir = /usr/local/mysql #MySQL程序安装路径
-# datadir = /data/mysql #MySQl数据库存放目录
+# vi /etc/rc.d/init.d/mysqld #edit
+# basedir = /usr/local/mysql #MySQL installation path
+# datadir = /data/mysql #MySQl database data path
 # 
 # 
 ######################
 
 ######################
 #
-# mysql启动 service mysqld start
+# mysql start: service mysqld start
+# mysql stop: service mysqld stop
+# mysql restart: service mysqld restart
 #
-# /usr/local/mysql/bin/mysqladmin -u root -p password "123456" #修改密码　　
+# /usr/local/mysql/bin/mysqladmin -u root -p password "123456" #change root password
 #
 #
 #

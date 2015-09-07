@@ -4,9 +4,9 @@ soft=nginx-1.9.4
 softPkg=$soft.tar.gz
 
 yum install make apr* autoconf automake curl-devel gcc gcc-c++ zlib-devel openssl openssl-devel pcre-devel gd kernel keyutils patch perl kernel-headers compat* mpfr cpp glibc libgomp libstdc++-devel ppl cloog-ppl keyutils-libs-devel libcom_err-devel libsepol-devel  libselinux-devel krb5-devel zlib-devel libXpm* freetype libjpeg* libpng* php-common php-gd ncurses* libtool* libxml2 libxml2-devel patch
-cd /root/soft
 
 # install pcre for nginx
+cd /root/soft
 wget http://sourceforge.net/projects/pcre/files/pcre/8.35/pcre-8.35.tar.gz
 tar zxvf pcre-8.35.tar.gz
 cd pcre-8.35
@@ -19,6 +19,7 @@ make install
 groupadd www
 useradd -g www www -s /bin/false
 
+cd /root/soft/
 wget http://nginx.org/download/$softPkg
 tar zxvf $softPkg
 cd /root/soft/$soft
@@ -108,9 +109,9 @@ chkconfig nginx on
 
 ######################
 #
-# nginx∆Ù∂Ø service nginx start
-# nginxÕ£÷π service nginx stop
-# nginx÷ÿ∆Ù service nginx restart
+# nginx start: service nginx start
+# nginx stop: service nginx stop
+# nginx restart: service nginx restart
 # 
 #
 #
