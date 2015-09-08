@@ -15,7 +15,6 @@ make install
 
 
 # install php
-
 cd /root/soft
 wget http://php.net/get/$softPkg/from/this/mirror
 mv mirror $softPkg

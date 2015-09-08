@@ -4,17 +4,6 @@ soft=mysql-5.6.26
 softPkg=$soft.tar.gz
 
 
-# install cmake for mysql
-cd /root/soft
-wget http://www.cmake.org/files/v2.8/cmake-2.8.8.tar.gz
-tar zxvf cmake-2.8.8.tar.gz
-cd cmake-2.8.8
-./configure
-make
-make install
-
-
-
 # install mysql 
 groupadd mysql
 useradd -g mysql mysql -s /bin/false
