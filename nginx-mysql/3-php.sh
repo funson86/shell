@@ -29,6 +29,7 @@ make install
 cp php.ini-production /usr/local/php/etc/php.ini
 rm -rf /etc/php.ini
 ln -s /usr/local/php/etc/php.ini /etc/php.ini
+ln -s /usr/local/php/bin/php /usr/bin/
 cp /usr/local/php/etc/php-fpm.conf.default /usr/local/php/etc/php-fpm.conf
 cp /root/soft/$soft/sapi/fpm/init.d.php-fpm /etc/rc.d/init.d/php-fpm
 chmod +x /etc/rc.d/init.d/php-fpm
