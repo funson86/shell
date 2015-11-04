@@ -53,9 +53,9 @@ chkconfig php-fpm on
 
 ######################
 #
-# php-fpm∆Ù∂Ø /usr/local/php/sbin/php-fpm
-# php-fpmÕ£÷π /etc/rc.d/init.d/php-fpm stop
-# php-fpm÷ÿ∆Ù /etc/rc.d/init.d/php-fpm restart
+# php-fpm start: /usr/local/php/sbin/php-fpm
+# php-fpm stop: /etc/rc.d/init.d/php-fpm stop
+# php-fpm restart: /etc/rc.d/init.d/php-fpm restart
 # 
 #
 #
