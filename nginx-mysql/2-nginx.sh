@@ -22,7 +22,7 @@ cd /root/soft/
 wget http://nginx.org/download/$softPkg
 tar zxvf $softPkg
 cd /root/soft/$soft
-./configure --prefix=/usr/local/nginx --without-http_memcached_module --user=www --group=www --with-http_stub_status_module --with-openssl=/usr/ --with-pcre=/root/soft/pcre-8.35
+./configure --prefix=/usr/local/nginx --without-http_memcached_module --user=www --group=www --with-http_stub_status_module --with-http_ssl_module --with-pcre=/root/soft/pcre-8.35
 make
 make install
 
