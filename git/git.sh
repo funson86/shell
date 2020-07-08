@@ -6,7 +6,7 @@ softPkg=$soft.tar.gz
 yum -y install curl-devel expat-devel gettext-devel openssl-devel zlib-devel gcc perl-ExtUtils-MakeMaker wget
 
 # install git 
-mkdir -p /root/soft/
+mkdir -p /root/soft
 cd /root/soft/
 wget https://www.kernel.org/pub/software/scm/git/$softPkg
 tar zxvf $softPkg
