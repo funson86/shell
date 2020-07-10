@@ -25,3 +25,5 @@ source /etc/bashrc
 # git remote -v
 # 
 ######################
+
+# git config core.filemode false  #git pull时本地文件如果不是644，则提示本地文件修改了，linux下忽略本地文件权限变化 
