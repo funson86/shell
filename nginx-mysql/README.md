@@ -1,14 +1,23 @@
-vi /usr/local/nginx/conf/nginx.conf #±à¼­ÅäÖÃÎÄ¼ş,Ğè×öÈçÏÂĞŞ¸Ä
-user www www; #Ê×ĞĞuserÈ¥µô×¢ÊÍ,ĞŞ¸ÄNginxÔËĞĞ×éÎªwww www£»±ØĞëÓë/usr/local/php/etc/php-fpm.confÖĞµÄuser,groupÅäÖÃÏàÍ¬£¬·ñÔòphpÔËĞĞ³ö´í
-index index.php index.html index.htm; #Ìí¼Óindex.php
+```
+vi /usr/local/nginx/conf/nginx.conf #ç¼–è¾‘é…ç½®æ–‡ä»¶,éœ€åšå¦‚ä¸‹ä¿®æ”¹
+```
+
+```
+user www www; #é¦–è¡Œuserå»æ‰æ³¨é‡Š,ä¿®æ”¹Nginxè¿è¡Œç»„ä¸ºwww wwwï¼›å¿…é¡»ä¸/usr/local/php/etc/php-fpm.confä¸­çš„user,groupé…ç½®ç›¸åŒï¼Œå¦åˆ™phpè¿è¡Œå‡ºé”™
+
+index index.php index.html index.htm; #æ·»åŠ index.php
+
 # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
 location ~ \.php$ {
-root html;
-fastcgi_pass 127.0.0.1:9000;
-fastcgi_index index.php;
-fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
-include fastcgi_params;
+  root html;
+  fastcgi_pass 127.0.0.1:9000;
+  fastcgi_index index.php;
+  fastcgi_param SCRIPT_FILENAME $document_root$fastcgi_script_name;
+  include fastcgi_params;
 }
-#È¡ÏûFastCGI server²¿·ÖlocationµÄ×¢ÊÍ,²¢Òª×¢Òâfastcgi_paramĞĞµÄ²ÎÊı,¸ÄÎª
-$document_root$fastcgi_script_name,»òÕßÊ¹ÓÃ¾ø¶ÔÂ·¾¶
-/etc/init.d/nginx restart #ÖØÆônginx
+#å–æ¶ˆFastCGI serveréƒ¨åˆ†locationçš„æ³¨é‡Š,å¹¶è¦æ³¨æ„fastcgi_paramè¡Œçš„å‚æ•°,æ”¹ä¸º $document_root$fastcgi_script_name,æˆ–è€…ä½¿ç”¨ç»å¯¹è·¯å¾„
+```
+
+```
+/etc/init.d/nginx restart #é‡å¯nginx
+```
